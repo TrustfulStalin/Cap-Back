@@ -37,7 +37,7 @@ public class GameSphereApplication {
     }
 
 
-    @Autowired
+   
     private ActionService actionService;
 
     @GetMapping("/hello")
