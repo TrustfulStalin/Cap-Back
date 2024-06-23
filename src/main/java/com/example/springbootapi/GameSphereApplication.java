@@ -19,7 +19,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springbootapi.entity.Action;
+import com.example.springbootapi.entity.Fighter;
+import com.example.springbootapi.entity.Shooter;
+import com.example.springbootapi.entity.Sport;
 import com.example.springbootapi.service.ActionService;
+import com.example.springbootapi.service.FighterService;
+import com.example.springbootapi.service.ShooterService;
+import com.example.springbootapi.service.SportService;
 
 @SpringBootApplication
 @RestController
@@ -67,6 +73,99 @@ public class GameSphereApplication {
         actionService.deleteAction(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/shooter")
+    public List<Shooter> getAllshooters() {
+        return ShooterService.getAllShooters();
+    }
+
+    @GetMapping("/shooter/{id}")
+    public ResponseEntity<Shooter> getShooterById(@PathVariable String id) {
+        Shooter shooter = ShooterService.getShooterById(id);
+        return ResponseEntity.ok(shooter);
+    }
+
+    @PostMapping("/shooters")
+    public ResponseEntity<Shooter> saveShooter(@RequestBody Shooter shooter) {
+        Shooter savedShooter = ShooterService.saveShooter(shooter);
+        return ResponseEntity.ok(savedShooter);
+    }
+
+    @PutMapping("/shooter/{id}")
+    public ResponseEntity<Shooter> updateShooter(@PathVariable String id, @RequestBody Shooter shooter) {
+        Shooter updatedShooter = ShooterService.updateShooter(id, shooter);
+        return ResponseEntity.ok(updatedShooter);
+    }
+
+    @DeleteMapping("/shooters/{id}")
+    public ResponseEntity<Void> deleteShooter(@PathVariable String id) {
+        ShooterService.deleteShooter(id);
+        return ResponseEntity.noContent().build();
+    }
+
+
+    @GetMapping("/fighter")
+    public List<Fighter> getAllfighters() {
+        return FighterService.getAllFighters();
+    }
+
+    @GetMapping("/fighter/{id}")
+    public ResponseEntity<Fighter> getFighterById(@PathVariable String id) {
+        Fighter fighter = FighterService.getFighterById(id);
+        return ResponseEntity.ok(fighter);
+    }
+
+    @PostMapping("/fighters")
+    public ResponseEntity<Fighter> saveFighter(@RequestBody Fighter fighter) {
+        Fighter savedFighter = FighterService.saveFighter(fighter);
+        return ResponseEntity.ok(savedFighter);
+    }
+
+    @PutMapping("/fighter/{id}")
+    public ResponseEntity<Fighter> updateFighter(@PathVariable String id, @RequestBody Fighter fighter) {
+        Fighter updatedFighter = FighterService.updateFighter(id, fighter);
+        return ResponseEntity.ok(updatedFighter);
+    }
+
+    @DeleteMapping("/fighters/{id}")
+    public ResponseEntity<Void> deleteFighter(@PathVariable String id) {
+        FighterService.deleteFighter(id);
+        return ResponseEntity.noContent().build();
+    }
+
+
+    @GetMapping("/sport")
+    public List<Sport> getAllSports() {
+        return SportService.getAllSports();
+    }
+
+    @GetMapping("/sport/{id}")
+    public ResponseEntity<Sport> getSportById(@PathVariable String id) {
+        Sport sport = SportService.getSportById(id);
+        return ResponseEntity.ok(sport);
+    }
+
+    @PostMapping("/sports")
+    public ResponseEntity<Sport> saveSport(@RequestBody Sport sport) {
+        Sport savedSport = SportService.saveSport(sport);
+        return ResponseEntity.ok(savedSport);
+    }
+
+    @PutMapping("/sport/{id}")
+    public ResponseEntity<Sport> updateSport(@PathVariable String id, @RequestBody Sport sport) {
+        Sport updatedSport = SportService.updateSport(id, sport);
+        return ResponseEntity.ok(updatedSport);
+    }
+
+    @DeleteMapping("/sport/{id}")
+    public ResponseEntity<Void> deleteSport(@PathVariable String id) {
+        SportService.deleteSport(id);
+        return ResponseEntity.noContent().build();
+    }
+
+
+
+    
 }
 
 
