@@ -26,17 +26,29 @@ import com.example.springbootapi.service.ActionService;
 import com.example.springbootapi.service.FighterService;
 import com.example.springbootapi.service.ShooterService;
 import com.example.springbootapi.service.SportService;
+import static com.mongodb.client.model.Filters.eq;
+import org.bson.Document;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+
+
 
 @SpringBootApplication
-@RestController
 @EnableMongoRepositories(basePackages = "com.example.springbootapi.repository")
+@RestController
 public class GameSphereApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GameSphereApplication.class, args);
     }
 
-
+    
    
     private ActionService actionService;
 
@@ -47,7 +59,7 @@ public class GameSphereApplication {
 
         @GetMapping("/actions")
     public List<Action> getAllActions() {
-        return actionService.getAllActions();
+        return ActionService.getAllActions();
     }
 
     @GetMapping("/actions/{id}")
@@ -58,7 +70,7 @@ public class GameSphereApplication {
 
     @PostMapping("/actions")
     public ResponseEntity<Action> saveAction(@RequestBody Action action) {
-        Action savedAction = actionService.saveAction(action);
+        Action savedAction = ActionService.saveAction(action);
         return ResponseEntity.ok(savedAction);
     }
 
@@ -167,6 +179,8 @@ public class GameSphereApplication {
 
     
 }
+
+
 
 
 

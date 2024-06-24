@@ -24,7 +24,7 @@ public class MongoConfig {
 
       @Bean
     public MongoClient mongoClient() {
-        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/Games");
+        ConnectionString connectionString = new ConnectionString("mongodb+srv://tevon64:games@games.ka06nlz.mongodb.net/?retryWrites=true&w=majority&appName=Games");
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .build();

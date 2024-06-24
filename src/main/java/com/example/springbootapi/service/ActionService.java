@@ -2,26 +2,23 @@ package com.example.springbootapi.service;
 
 import com.example.springbootapi.entity.Action;
 import com.example.springbootapi.repository.ActionRepository;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-
 @Service
 public class ActionService {
 
-    private final ActionRepository actionRepository;
+    private static ActionRepository actionRepository;
 
     @Autowired
-    public ActionService(ActionRepository actionRepository) {
+    public  ActionService(ActionRepository actionRepository) {
         this.actionRepository = actionRepository;
     }
 
-    public List<Action> getAllActions() {
+    public static List<Action> getAllActions() {
         return actionRepository.findAll();
     }
 
@@ -30,7 +27,7 @@ public class ActionService {
         return optionalAction.orElseThrow(() -> new RuntimeException("Action not found with id: " + _id));
     }
 
-    public Action saveAction(Action action) {
+    public static Action saveAction(Action action) {
         return actionRepository.save(action);
     }
 
