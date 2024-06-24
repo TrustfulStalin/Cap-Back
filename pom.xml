@@ -17,8 +17,10 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
+        <java.version>17</java.version> <!-- Update to the Java version you are using -->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>17</java.version> <!-- Update to 17 if you are using Java 17 -->
     </properties>
 
     <dependencies>
