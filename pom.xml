@@ -75,8 +75,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <!-- Use the latest version of the compiler plugin -->
                 <version>3.8.0</version>
                 <configuration>
+                    <!-- Set the source and target to use the Java version defined in properties -->
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
