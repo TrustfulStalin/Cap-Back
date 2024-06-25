@@ -4,81 +4,88 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Parent POM -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.0.RELEASE</version> <!-- Adjusted to match the parent version -->
+        <version>2.5.0</version> <!-- Update to the latest stable Spring Boot version -->
     </parent>
 
-    <groupId>World</groupId>
-    <artifactId>GS</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>GameSphere</name>
-    <description>Demo project for Spring Boot</description>
+    <!-- Project Information -->
+    <groupId>com.example</groupId>
+    <artifactId>your-project-name</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Your Project Name</name>
+    <description>Spring Boot project with Maven</description>
 
+    <!-- Properties -->
     <properties>
-        <java.version>17</java.version>
+        <java.version>17</java.version> <!-- Java version -->
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-cloud.version>2020.0.3</spring-cloud.version> <!-- Example Spring Cloud version -->
     </properties>
 
+    <!-- Dependencies -->
     <dependencies>
-        <!-- Spring Boot dependencies -->
+        <!-- Spring Boot Starter Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- Spring Boot Starter Data MongoDB -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
+
+        <!-- Spring Boot DevTools (optional) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-        <!-- MongoDB driver -->
+
+        <!-- MongoDB Driver -->
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-sync</artifactId>
-            <version>5.1.1</version>
+            <version>4.4.3</version> <!-- Example version -->
         </dependency>
-        <!-- PostgreSQL driver -->
+
+        <!-- PostgreSQL Driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
+            <version>42.2.23</version> <!-- Example version -->
         </dependency>
-        <!-- Lombok for simplified Java code -->
+
+        <!-- Lombok (optional) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- Spring Boot starter test -->
+
+        <!-- Spring Boot Starter Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!-- Spring Data JPA -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
-            <version>2.1.10.RELEASE</version>
+            <version>2.5.0</version> <!-- Example version -->
         </dependency>
-        <!-- Example dependency (replace with your actual dependency) -->
-        <!--
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>example-artifact</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        -->
     </dependencies>
 
+    <!-- Build Configuration -->
     <build>
         <plugins>
             <!-- Maven Compiler Plugin -->
@@ -91,11 +98,12 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+
             <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.3.0.RELEASE</version> <!-- Use the same Spring Boot version as parent -->
+                <version>2.5.0</version> <!-- Use the same version as Spring Boot parent -->
                 <configuration>
                     <excludes>
                         <exclude>
@@ -105,14 +113,6 @@
                     </excludes>
                 </configuration>
             </plugin>
-            <!-- Example plugin configuration (replace with your actual plugin) -->
-            <!--
-            <plugin>
-                <groupId>com.example</groupId>
-                <artifactId>example-plugin</artifactId>
-                <version>1.0.0</version>
-            </plugin>
-            -->
         </plugins>
     </build>
 
