@@ -71,6 +71,19 @@
         </dependency>
     </dependencies>
 
+    <toolchains>
+    <toolchain>
+        <type>jdk</type>
+        <provides>
+            <version>17</version>
+            <vendor>adoptopenjdk</vendor>
+        </provides>
+        <configuration>
+            <jdkHome>C:\Program Files (x86)\Java\jdk1.8.0_202</jdkHome>
+        </configuration>
+    </toolchain>
+</toolchains>
+
     <build>
         <plugins>
 <plugin>
