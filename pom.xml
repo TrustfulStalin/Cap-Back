@@ -71,31 +71,8 @@
         </dependency>
     </dependencies>
 
-    <toolchains>
-    <toolchain>
-        <type>jdk</type>
-        <provides>
-            <version>17</version>
-            <vendor>adoptopenjdk</vendor>
-        </provides>
-        <configuration>
-            <jdkHome>C:\Program Files (x86)\Java\jdk1.8.0_202</jdkHome>
-        </configuration>
-    </toolchain>
-</toolchains>
-
     <build>
         <plugins>
-<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
-
-
             <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -122,5 +99,18 @@
             </plugin>
         </plugins>
     </build>
+
+    <toolchains>
+        <toolchain>
+            <type>jdk</type>
+            <provides>
+                <version>17</version>
+                <vendor>adoptopenjdk</vendor>
+            </provides>
+            <configuration>
+                <jdkHome>C:\Program Files\AdoptOpenJDK\jdk-17.0.1+12</jdkHome>
+            </configuration>
+        </toolchain>
+    </toolchains>
 
 </project>
