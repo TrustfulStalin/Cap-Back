@@ -75,14 +75,13 @@
         <plugins>
             <!-- Maven Compiler Plugin -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.3</version> <!-- Use a version that supports the release parameter -->
-                <configuration>
-                    <release>${maven.compiler.release}</release>
-                </configuration>
-            </plugin>
-
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.8.3</version> <!-- Ensure you are using Maven 3.8.3 or higher -->
+    <configuration>
+        <release>17</release> <!-- Set the Java release version -->
+    </configuration>
+</plugin>
             <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
