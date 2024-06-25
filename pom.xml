@@ -83,7 +83,7 @@
                 <version>3.11.0</version> <!-- Use a version that supports Java 17 -->
                 <configuration>
                     <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <target>17</target>
                 </configuration>
             </plugin>
             <!-- Spring Boot Maven Plugin -->
