@@ -73,6 +73,9 @@
 
     <build>
         <plugins>
+
+
+
             <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -99,18 +102,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <toolchains>
-        <toolchain>
-            <type>jdk</type>
-            <provides>
-                <version>17</version>
-                <vendor>adoptopenjdk</vendor>
-            </provides>
-            <configuration>
-                <jdkHome>C:\Program Files\AdoptOpenJDK\jdk-17.0.1+12</jdkHome>
-            </configuration>
-        </toolchain>
-    </toolchains>
 
 </project>
