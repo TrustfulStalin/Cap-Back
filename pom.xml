@@ -16,7 +16,7 @@
     <name>GameSphere</name>
     <description>Demo project for Spring Boot</description>
 
-    
+
     <dependencies>
         <!-- Spring Boot dependencies -->
         <dependency>
@@ -65,30 +65,10 @@
     <build>
         <plugins>
             <!-- Maven Compiler Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Ensure you are using Maven 3.8.3 or higher -->
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                </configuration>
-            </plugin>
+          
 
             <!-- Spring Boot Maven Plugin -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.3.0</version> <!-- Use the same Spring Boot version as parent -->
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
+            
         </plugins>
     </build>
 </project>
