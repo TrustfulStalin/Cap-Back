@@ -7,8 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!-- Change the Spring Boot version to a compatible version with Java 8 -->
-        <version>1.4.2.RELEASE</version>
+        <version>3.3.0</version>
     </parent>
 
     <groupId>World</groupId>
@@ -18,18 +17,14 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <!-- Set Java version to 1.8 for compatibility -->
-        <java.version>1.8</java.version>
-        <!-- Set Maven compiler source and target versions to 1.8 -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <lombok.version>1.18.22</lombok.version> <!-- Example version, adjust as needed -->
     </properties>
 
     <dependencies>
         <!-- Spring Boot dependencies -->
-        <!-- Ensure these dependencies are compatible with Java 8 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -83,18 +78,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Ensure you are using Maven 3.8.1 or higher -->
+                <version>3.8.1</version> <!-- Ensure you are using Maven 3.8.3 or higher -->
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <release>${maven.compiler.release}</release> <!-- Set the Java release version -->
                 </configuration>
             </plugin>
-
+            
             <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.4.2.RELEASE</version> <!-- Use the same Spring Boot version as parent -->
+                <version>3.3.0</version> <!-- Use the same Spring Boot version as parent -->
                 <configuration>
                     <excludes>
                         <exclude>
