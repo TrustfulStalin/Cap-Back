@@ -76,7 +76,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version> <!-- Ensure you are using Maven 3.8.3 or higher -->
                 <configuration>
-                    <release>${maven.compiler.release}</release> <!-- Set the Java release version -->
+                    <release>17</release> <!-- Set the Java release version -->
                 </configuration>
             </plugin>
 
