@@ -22,7 +22,7 @@ public class ActionService {
         return actionRepository.findAll();
     }
 
-    public Action getActionById(String _id) {
+    public static Action getActionById(String _id) {
         Optional<Action> optionalAction = actionRepository.findById(_id);
         return optionalAction.orElseThrow(() -> new RuntimeException("Action not found with id: " + _id));
     }
