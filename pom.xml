@@ -68,7 +68,18 @@
           
 
             <!-- Spring Boot Maven Plugin -->
-            
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <version>3.3.0</version> <!-- Use the same Spring Boot version as parent -->
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
