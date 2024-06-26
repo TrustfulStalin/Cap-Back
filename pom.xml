@@ -70,6 +70,7 @@
             <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.3.0</version> <!-- Use the same Spring Boot version as parent -->
                 <configuration>
                     <excludes>
