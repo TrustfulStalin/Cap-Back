@@ -34,7 +34,7 @@ public class FighterService {
         return fighterRepository.save(fighter);
     }
 
-    public Fighter updateFighter(String _id, Fighter updateFighter) {
+    public static Fighter updateFighter(String _id, Fighter updateFighter) {
         Optional<Fighter> optionalExistingFighter = fighterRepository.findById(_id);
         if (optionalExistingFighter.isPresent()) {
             Fighter existingFighter = optionalExistingFighter.get();
@@ -56,8 +56,4 @@ public class FighterService {
         fighterRepository.deleteById(_id);
     }
 
-    public static Fighter updateFighter(String id, Fighter fighter) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updateFighter'");
-    }
 }
