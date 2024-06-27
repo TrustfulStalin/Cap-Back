@@ -34,7 +34,7 @@ public class FighterService {
         return fighterRepository.save(fighter);
     }
 
-    public Fighter updateAction(String _id, Fighter updateFighter) {
+    public Fighter updateFighter(String _id, Fighter updateFighter) {
         Optional<Fighter> optionalExistingFighter = fighterRepository.findById(_id);
         if (optionalExistingFighter.isPresent()) {
             Fighter existingFighter = optionalExistingFighter.get();

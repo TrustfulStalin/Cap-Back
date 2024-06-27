@@ -74,11 +74,7 @@ public class GameSphereApplication {
         return ResponseEntity.ok(savedAction);
     }
 
-    @PutMapping("/actions/{id}")
-    public ResponseEntity<Action> updateAction(@PathVariable String id, @RequestBody Action action) {
-        Action updatedAction = actionService.updateAction(id, action);
-        return ResponseEntity.ok(updatedAction);
-    }
+   
 
     @DeleteMapping("/actions/{id}")
     public ResponseEntity<Void> deleteAction(@PathVariable String id) {
@@ -131,6 +127,12 @@ public class GameSphereApplication {
     public ResponseEntity<Fighter> saveFighter(@RequestBody Fighter fighter) {
         Fighter savedFighter = FighterService.saveFighter(fighter);
         return ResponseEntity.ok(savedFighter);
+    }
+    
+    @PutMapping("/actions/{id}")
+    public ResponseEntity<Action> updateAction(@PathVariable String id, @RequestBody Action action) {
+        Action updatedAction = ActionService.updateAction(id, action);
+        return ResponseEntity.ok(updatedAction);
     }
 
     @PutMapping("/fighter/{id}")
