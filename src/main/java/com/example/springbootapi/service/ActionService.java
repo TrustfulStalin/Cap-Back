@@ -31,7 +31,7 @@ public class ActionService {
         return actionRepository.save(action);
     }
 
-    public Action updateAction(String _id, Action updateAction) {
+    public static Action updateAction(String _id, Action updateAction) {
         Optional<Action> optionalExistingAction = actionRepository.findById(_id);
         if (optionalExistingAction.isPresent()) {
             Action existingAction = optionalExistingAction.get();
@@ -49,7 +49,7 @@ public class ActionService {
         }
     }
 
-    public void deleteAction(String _id) {
+    public static void deleteAction(String _id) {
         actionRepository.deleteById(_id);
     }
 }
